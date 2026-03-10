@@ -1,0 +1,6 @@
+all:
+  children:
+    openvpn:
+      hosts:
+        srv1:
+          ansible_host: 83.228.235.123

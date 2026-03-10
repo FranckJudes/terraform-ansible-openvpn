@@ -1,0 +1,13 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for roles/openvpn
+
+
+vpn_server_name: "vpn-server"
+vpn_key_name: "serverVPN"
+vpn_key_country: "FR"
+vpn_key_province: "IDF"
+vpn_key_city: "Paris"
+vpn_key_org: "MyCompany"
+vpn_key_email: "gallagher@mycompany.com"
+vpn_key_ou: "IT"

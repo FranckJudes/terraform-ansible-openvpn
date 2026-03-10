@@ -1,0 +1,50 @@
+variable "network_external_id" {
+  type    = string
+  default = "34a684b8-2889-4950-b08e-c33b3954a307"
+}
+variable "network_extenal_name" {
+  type    = string
+  default = "ext-floating1"
+}
+variable "network_internal_dev" {
+  type    = string
+  default = "internal_dev"
+}
+
+variable "network_subnet_cidr" {
+  type    = string
+  default = "10.0.1.0/24"
+}
+
+variable "ssh_public_key_default_user" {
+  type    = string
+  default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIuu0MajRls+OsfzEY4fMixL6sYDOpAWvavFVNOQPCcd gallagher@Gallagher"
+}
+
+variable "instance_image_id" {
+  type    = string
+  default = "359e3ea8-a295-496f-9b41-06db46b23e14"
+}
+
+variable "instance_flavor_id" {
+  type    = string
+  default = "093a53d7-f420-4b79-9bb0-9ad4eb190631"
+}
+
+variable "instance_security_groups" {
+  type    = list(any)
+  default = ["default"]
+}
+
+variable "metadatas" {
+  type = map(string)
+  default = {
+    "environmement" = "dev"
+  }
+}
+
+
+variable "vpn_user_list" {
+  type    = list(any)
+  default = ["gallagher"]
+}
