@@ -12,11 +12,25 @@ This repository contains Terraform configurations and Ansible playbooks to autom
 - Ansible
 - Access to a cloud provider (e.g., AWS, GCP)
 
+## OpenStack Provider
+
+This project targets OpenStack. Configure the Terraform provider by setting the usual OpenStack environment variables before running Terraform:
+
+```
+export OS_AUTH_URL=...
+export OS_USERNAME=...
+export OS_PASSWORD=...
+export OS_PROJECT_NAME=...
+export OS_REGION_NAME=...
+```
+
+Alternatively, point to a `clouds.yaml` file with `export OS_CLIENT_CONFIG_FILE=~/.config/openstack/clouds.yaml`. Adjust `terraform/vpn/00_providers.tf` if you need a different provider version.
+
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/terraform-ansible-openvpn.git
+   git clone https://github.com/FranckJudes/terraform-ansible-openvpn.git
    cd terraform-ansible-openvpn
    ```
 
